@@ -1,0 +1,58 @@
+@import '../rules/variables';
+@import './menu.scss';
+
+.header {
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+    &__icon {
+        display: inline-block;
+
+        font-size: 25px;
+        color: $primary_black;
+
+        &:first-child {
+            margin-right: 18px;
+        }
+
+        &:not(:first-child) {
+            margin: 0 18px;
+        }
+
+        &:hover,
+        &:focus {
+            animation-name: bounce;
+            animation-duration: .6s;
+        }
+
+        &:active {
+            opacity: .7;
+        }
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-3px);  
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-1px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

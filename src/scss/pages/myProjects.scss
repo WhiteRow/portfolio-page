@@ -1,0 +1,86 @@
+@import '../rules/variables';
+
+.my-projects {
+    $cardMargin: 50px;
+
+    &__list {
+        // width: calc(100% + #{$cardMargin}*2);
+        margin-top: 50px;
+
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        flex: 0 1 auto;
+        margin-bottom: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(145, 145, 145, 0.5), 0px 8px 50px rgba(144, 144, 144, 0.25);
+
+        &:nth-child(2n) {
+            margin-left: 100px;
+        }
+
+        &:hover &__image {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        
+ 
+        &__info {
+            padding: 70px 40px;
+            color: $primary_black;
+        }
+
+        &__title {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        &__stack {
+            margin: 25px 0;
+        }
+
+        &__text {
+            opacity: .8;
+        }
+
+        &__button {
+            width: 120px;
+
+            padding: 8px 15px;
+
+            display: inline-block;
+
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+
+            text-align: center;
+
+            border-radius: 30px;
+
+            &.repo {
+                margin-left: 20px;
+                background-color: $primary_black;
+            }
+        }
+
+        &__figure {
+            overflow: hidden;
+        }
+
+        &__image {
+            opacity: .9;
+
+            transition: 0.2s ease-in-out;
+        }
+    }
+}

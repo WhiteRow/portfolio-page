@@ -1,0 +1,96 @@
+/* Base */
+@import '../rules/variables';
+@import '../rules/base';
+@import '../rules/layout';
+
+/* Uploads */
+@import '../uploads/iconFont';
+
+/* Main */
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__info {
+        margin-top: 30px;
+
+        color: $primary_black;
+        opacity: .6;
+        &__item {
+            margin: 5px 0;
+
+            display: flex;
+            align-items: center;
+        }
+        &__icon {
+            font-size: 24px;
+        }
+        &__text {
+            margin-left: 20px;
+
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    &__experience {
+        margin-right: 120px;
+        &__item {
+            margin: 30px 0;
+        }
+
+        &__title {
+            opacity: .7;
+        }
+
+        &__text {
+            margin-bottom: 10px;
+
+            font-size: 16px;
+            color: $primary_black;
+            opacity: .8; 
+
+            &:nth-child(3) {
+                opacity: .7;
+            }
+
+            &.underline {
+                display: inline-block;
+                
+                &:hover,
+                &:focus {
+                    &:before {
+                        width: 100%;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &__skills {
+        max-width: 445px;
+        &__list {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__item {
+            padding: 12px 20px;
+            margin: 0 15px 15px 0;
+
+            border-radius: 20px;
+
+            font-size: 16px;
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+
+    &__avatar {
+        width: 500px;
+        object-fit: cover;
+    }
+}
+

@@ -1,0 +1,26 @@
+.menu {
+    display: flex;
+
+    &__item {
+        font-size: 18px;
+        font-weight: 400;
+        color: $primary_black;
+
+        position: relative;
+
+        &:last-child {
+            margin-left: 30px;
+        }
+
+        &:not(:last-child) {
+            margin: 0 30px;
+        }
+
+        &.is-active {
+            &:before {
+                width: 100%;
+                opacity: .8;
+            }
+        }
+    }
+}
