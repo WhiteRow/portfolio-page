@@ -4,7 +4,8 @@ module.exports = function() {
 			overlay: true,
 			port: 3000,
 			watchContentBase: true,
-			progress: true
+			progress: true,
+			historyApiFallback: true,
 		}
 	};
 };

@@ -4,7 +4,12 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 export default function Header ({ socialMedias, menuLinks }) {
-    const [activeItem, setActiveItem] = React.useState(0);
+    let state = 0;
+
+    // activeClassName on navlink doesnt work :| 
+    if (location.pathname === '/myprojects') state = 1;
+    
+    const [activeItem, setActiveItem] = React.useState(state);
 
 return (
         <header className="header">
