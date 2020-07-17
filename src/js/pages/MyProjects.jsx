@@ -1,9 +1,9 @@
+import React from 'react'
+
 import '../../scss/pages/myProjects.scss';
 
 import craftedImage from '../../assets/images/crafted-project-image.png';
 import huaweiImage from '../../assets/images/huawei-project-image.png';
-
-import React from 'react'
 
 export default function MyProjects() {
     return (
