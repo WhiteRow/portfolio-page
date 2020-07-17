@@ -1,14 +1,29 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 
-import AboutMe from '../pages/AboutMe';
-import MyProjects from '../pages/MyProjects';
-
-export default function Routes() {
+export default function Routes({ routes }) {
     return (
-        <Switch>
-            <Route exact  path='/' component={AboutMe} />
-            <Route path='/myprojects' component={MyProjects} />
-        </Switch>
+        <div>
+            {
+                routes.map(({path, Component}) => (
+                    <Route key={path} exact path={ path }>  
+                        {({ match }) => (
+                            <CSSTransition
+                                in={match !== null}
+                                timeout={300}
+                                classNames="page"
+                                mountOnEnter
+                                unmountOnExit
+                            >
+                                <div className="page">
+                                    <Component />
+                                </div>
+                            </CSSTransition>
+                        )}
+                    </Route>
+                ))
+            }
+        </div>
     )
 }

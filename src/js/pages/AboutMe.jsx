@@ -1,7 +1,7 @@
+import React from 'react';
+
 import '../../scss/pages/aboutMe.scss';
 import avatar from '../../assets/images/about-me-image.png';
-
-import React from 'react';
 
 import Exp from '../components/Exp';
 import Skills from '../components/Skills';
