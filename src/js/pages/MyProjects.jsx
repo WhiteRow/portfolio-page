@@ -10,7 +10,8 @@ import huaweiImage from '../../assets/images/huawei-project-image.png';
 export default function MyProjects() {
     const projects = [
         { name: 'Crafted project', stack: 'js, lodash, html, sass, webpack', link: 'heh', repo: 'hah', image: craftedImage, color: '#59B3F9' },
-        { name: 'Huawei project', stack: 's, html, scss, webpack, modx', link: 'heh', repo: 'hah', image: huaweiImage, color: '#E85454' }
+        { name: 'Huawei project', stack: 's, html, scss, webpack, modx', link: 'heh', repo: 'hah', image: huaweiImage, color: '#E85454' },
+        { name: 'Huawei project', stack: 's, html, scss, webpack, modx', link: 'heh', repo: 'hah', image: huaweiImage, color: '#E85454' },
     ]
 
     return (
