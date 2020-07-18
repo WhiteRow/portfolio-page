@@ -24,11 +24,16 @@ export default function App() {
         { path: '/myprojects', Component: MyProjects }
     ]
 
+    const footerLinks = [
+        { link: 'tel:+79150721400', icon: 'phone', text: '+7 915 072 14 00' },
+        { link: 'mailto:meekgot@gmail.com', icon: 'email', text: 'meekgot@gmail.com' }
+    ]
+
     return (
         <div className="container">
-            <Header  socialMedias = { socialMedias } menuLinks = {menuLinks} />
+            <Header socialMedias = { socialMedias } menuLinks = {menuLinks} />
             <Routes routes = { routes } />
-            <Footer />
+            <Footer footerLinks = { footerLinks } />
         </div>
     )
 }
