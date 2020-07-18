@@ -2,17 +2,23 @@ import '../../scss/components/footer.scss';
 
 import React from 'react'
 
-export default function Footer() {
+function FooterLink ({ footerItem }) {
+    return (
+        <a href={ footerItem.link } className="footer__item">
+            <span className={ `fi flaticon-${footerItem.icon} footer__icon `}></span>
+            <p className="footer__text">{ footerItem.text }</p>
+        </a>
+    )
+}
+
+export default function Footer({ footerLinks }) {
     return (
         <footer className="footer">
-            <a href="tel:+79150721400" className="footer__item">
-                <span className="fi flaticon-phone footer__icon"></span>
-                <p className="footer__text">+7 915 072 14 00</p>
-            </a>
-            <a href="mailto:meekgot@gmail.com" className="footer__item">
-                <span className="fi flaticon-email footer__icon"></span>
-                <p className="footer__text">meekgot@gmail.com</p>
-            </a>
+            {
+                footerLinks.map(link => (
+                    <FooterLink key={ link.icon } footerItem = { link } />
+                ))
+            }
         </footer>
     )
 }
