@@ -4,7 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 
 export default function Routes({ routes }) {
     return (
-        <div>
+        <main className="main">
             {
                 routes.map(({path, Component}) => (
                     <Route key={path} exact path={ path }>  
@@ -12,18 +12,16 @@ export default function Routes({ routes }) {
                             <CSSTransition
                                 in={match !== null}
                                 timeout={300}
-                                classNames="page"
+                                classNames="section"
                                 mountOnEnter
                                 unmountOnExit
                             >
-                                <div className="page">
-                                    <Component />
-                                </div>
+                                <Component />
                             </CSSTransition>
                         )}
                     </Route>
                 ))
             }
-        </div>
+        </main>
     )
 }
