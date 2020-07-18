@@ -1,15 +1,21 @@
 @import '../rules/variables';
+@import '../rules/mixins';
 
 .my-projects {
     $cardMargin: 50px;
 
     &__list {
         // width: calc(100% + #{$cardMargin}*2);
+        height: 500px;
         margin-top: 50px;
 
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
+
+        overflow: auto;
+
+        @include overflowScroll;
     }
 
     &__card {
@@ -22,7 +28,8 @@
 
         background-color: #fff;
         border-radius: 10px;
-        box-shadow: 0px 4px 15px rgba(145, 145, 145, 0.5), 0px 8px 50px rgba(144, 144, 144, 0.25);
+        // box-shadow: 0px 4px 15px rgba(145, 145, 145, 0.5), 0px 8px 50px rgba(144, 144, 144, 0.25);
+        border: 1px solid hsl(250deg 12% 30% / .7);
 
         &:nth-child(2n) {
             margin-left: 100px;
@@ -79,6 +86,8 @@
 
         &__figure {
             overflow: hidden;
+
+            border-radius: 0px 10px 10px 0;
         }
 
         &__image {
