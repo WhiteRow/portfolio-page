@@ -13,11 +13,53 @@
     align-items: center;
     justify-content: space-between;
 
+    @include cmq(1150px) {
+        flex-direction: column;
+    }
+
+    .title_large,
+    .subtitle {
+        @include cmq(640px) {
+            text-align: center;
+        }
+    }
+
+    &__block {
+
+        @include cmq(1150px) {
+            width: 100%
+        }
+
+        &:nth-child(2) {
+            @include cmq(1150px) {
+                width: fit-content;
+
+                position: absolute;
+                top: 60px;
+                right: 0;
+            }
+
+            @include cmq(800px) {
+                top: -30px;
+                left: 180px;
+            }
+
+            @include cmq(640px) {
+                position: fixed;
+                left: unset;
+                top: unset;
+                right: 13px;
+                bottom: 130px;
+            }
+        }
+    }
+
     &__info {
         margin-top: 30px;
 
         color: $primary_black;
         opacity: .6;
+
         &__item {
             margin: 5px 0;
 
@@ -37,13 +79,25 @@
 
     &__experience {
         height: 435px;
-        
+
         padding-right: 20px;
         margin-right: 120px;
 
         overflow: auto;
 
         @include overflowScroll;
+
+        @include cmq(1500px) {
+            margin-right: 20px;
+        }
+
+        @include cmq(1150px) {
+            width: 50%;
+        }
+
+        @include cmq(480px) {
+            width: 100%;
+        }
         
         &__item {
             margin: 30px 0;
@@ -80,6 +134,24 @@
 
     &__skills {
         max-width: 445px;
+
+        @include cmq(1500px) {
+            max-width: 350px;
+        }
+       
+        @include cmq(1150px) {
+            max-width: 50%;
+        }
+
+        @include cmq(500px) {
+            max-width: 45%;
+        }
+        
+        @include cmq(480px) {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        
         &__list {
             margin-top: 30px;
             display: flex;
@@ -98,8 +170,22 @@
     }
 
     &__avatar {
-        width: 500px;
+        max-width: 500px;
+        border-radius: 50%;
+
         object-fit: cover;
+
+        @include cmq(1500px) {
+            max-width: 400px;
+        }
+
+        @include cmq(1150px) {
+            max-width: 250px;
+        }
+
+        @include cmq(860px) {
+            max-width: 30px;
+        }
     }
 }
 

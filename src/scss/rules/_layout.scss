@@ -1,3 +1,5 @@
+@import '../rules/mixins';
+
 .container {
     width: 100%;
     max-width: 1600px;
@@ -9,11 +11,34 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include cmq(1500px) {
+        max-width: 1200px;
+        padding: 0 40px;
+    }
+
+    @include cmq(1150px) {
+        max-width: 900px;
+    }
+
+    @include cmq(640px) {
+        max-width: 500px;
+        padding: 0 20px;
+    }
+
+    @include cmq(380px) {
+        padding: 0 10px;
+    }
 }
 
 .main {
     min-height: 720px;
     position: relative;
+
+    @include cmq(1500px) {
+        min-height: auto;
+        margin-bottom: 50px;
+    }
 }
 
 .section {
@@ -22,6 +47,12 @@
     position: absolute;
     top: 5%;
     left: 0;
+    
+    @include cmq(1500px) {
+        margin-top: 50px;
+
+        position: unset;
+    }
 
     &-enter {
         opacity: 0;
@@ -51,6 +82,20 @@
 
     display: flex;
     align-items: flex-start;  
+
+    @include cmq(1150px) {
+        margin-top: 130px;
+    }
+
+    @include cmq(860px) {
+        margin-top: 70px;
+    }
+
+    @include cmq(480px) {
+        margin-top: 30px;
+        flex-direction: column-reverse; 
+    }
+
 }
 
 .title_large,
@@ -63,6 +108,10 @@
 .title_large {
     font-size: 54px;
     font-weight: 500;
+
+    @include cmq(640px) {
+        font-size: 38px;
+    }
 }
 
 .title_tiny {
@@ -76,6 +125,10 @@
     margin-top: 10px;
     font-size: 24px;
     font-weight: normal;
+
+    @include cmq(640px) {
+        font-size: 18px;
+    }
 }
 
 .underline {
