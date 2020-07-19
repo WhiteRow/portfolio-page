@@ -8,6 +8,7 @@ import Skills from '../components/Skills';
 
 
 export default function AboutMe () {
+    console.log(screen.width);
     const Expirience = [
         {
             position: 'Frontend developer',
@@ -25,50 +26,27 @@ export default function AboutMe () {
             company: 'ООО Бизнес Молодость',
             time: 'август 2017 - март 2018',
             link: 'https://molodost.bz'
-        },
+        }
     ]
 
     const SkillList = [
-        {
-            name: 'Java script',
-            color: '#EBCC60'
-        },
-        {
-            name: 'Es6',
-            color: '#EBCC60'
-        },
-        {
-            name: 'React',
-            color: '#69B9F3'
-        },
-        {
-            name: 'Css',
-            color: '#60A8EB'
-        },
-        {
-            name: 'Sass',
-            color: '#EB608A'
-        },
-        {
-            name: 'Html',
-            color: '#EF8169'
-        },
-        {
-            name: 'Pug',
-            color: '#BD7262'
-        },
-        {
-            name: 'Webpack',
-            color: '#9DCDF0'
-        },
-
+        { name: 'Java script',color: '#EBCC60' },
+        { name: 'Es6',color: '#EBCC60' },
+        { name: 'React',color: '#69B9F3' },
+        { name: 'Css',color: '#60A8EB' },
+        { name: 'Sass',color: '#EB608A' },
+        { name: 'Html',color: '#EF8169' },
+        { name: 'Pug',color: '#BD7262' },
+        { name: 'Webpack',color: '#9DCDF0' },
+        { name: 'Figma',color: '#b78ad0' },
+        { name: 'Photoshop',color: '#5a81ce' }
     ]
 
     return (
         <section className="section about-me">
             <div className="about-me__block">
                 <h1 className="title_large">Обо мне</h1>
-                <p className="subtitle">Привет! Меня зовут  Егор, я frontend разработчик</p>
+                <p className="subtitle">Меня зовут  Егор, я frontend разработчик</p>
 
                 <div className="about-me__info">
                     <div className="about-me__info__item">
@@ -90,7 +68,7 @@ export default function AboutMe () {
                     />
 
                     <Skills 
-                        title = 'Навыки которыми я владею'
+                        title = 'Навыки, которыми я владею'
                         skills = { SkillList }
                     />
 
@@ -98,7 +76,11 @@ export default function AboutMe () {
             </div>
 
             <div className="about-me__block">
-                <img className="about-me__avatar" src={avatar} alt="avatar"/>
+                {
+                    screen.width <= 640 
+                        ? <a href={avatar} target="_blank"><img className="about-me__avatar" src={avatar} alt="avatar"/></a>
+                        : <img className="about-me__avatar" src={avatar} alt="avatar"/>
+                }
             </div>
         </section>
     )

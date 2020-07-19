@@ -59,7 +59,7 @@ const main = merge([
 
 module.exports = function(env, argv) {
 	if (argv.mode === 'production') {
-		return merge([main, extractCSS(), clear(directories.distribution)]);
+		return merge([main, extractCSS()]);
 	}
 	if (argv.mode === 'development') {
 		return merge([main, server(), styles(), surceMap()]);
