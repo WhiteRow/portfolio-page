@@ -5,6 +5,7 @@ import avatar from '../../assets/images/about-me-image.png';
 
 import Exp from '../components/Exp';
 import Skills from '../components/Skills';
+import Head from '../components/Head';
 
 
 export default function AboutMe () {
@@ -43,7 +44,8 @@ export default function AboutMe () {
     ]
 
     return (
-        <section className="section about-me">
+        <section className="section about-me">    
+            <Head title='Egor Belousov - обо мне' />
             <div className="about-me__block">
                 <h1 className="title_large">Обо мне</h1>
                 <p className="subtitle">Меня зовут  Егор, я frontend разработчик</p>

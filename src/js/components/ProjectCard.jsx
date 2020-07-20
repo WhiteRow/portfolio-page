@@ -34,7 +34,7 @@ export default function ProjectCard({ projectInfo }) {
                 </div>
             </div>
             <figure className="my-projects__card__figure">
-                <img src={ projectInfo.image } alt="" className="my-projects__card__image"/>
+                <img src={ projectInfo.image } alt={ projectInfo.name } className="my-projects__card__image"/>
             </figure>
         </div>
     )

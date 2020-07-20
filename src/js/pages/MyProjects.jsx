@@ -3,6 +3,7 @@ import React from 'react'
 import '../../scss/pages/myProjects.scss';
 
 import ProjectCard from '../components/ProjectCard';
+import Head from '../components/Head';
 
 import craftedImage from '../../assets/images/crafted-project-image.png';
 import huaweiImage from '../../assets/images/huawei-project-image.png';
@@ -21,6 +22,7 @@ export default function MyProjects() {
 
     return (
         <section className="section my-projects">
+            <Head title='Egor Belousov - мои проекты' />
             <h1 className="title_large">Мои проекты</h1>
             <p className="subtitle">Проекты, над которыми я работал</p>
 
