@@ -1,7 +1,5 @@
 import React from 'react'
 
-import '../../scss/pages/myProjects.scss';
-
 import ProjectCard from '../components/ProjectCard';
 import Head from '../components/Head';
 

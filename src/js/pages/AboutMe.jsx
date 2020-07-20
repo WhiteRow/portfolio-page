@@ -1,6 +1,5 @@
 import React from 'react';
 
-import '../../scss/pages/aboutMe.scss';
 import avatar from '../../assets/images/about-me-image.png';
 
 import Exp from '../components/Exp';
