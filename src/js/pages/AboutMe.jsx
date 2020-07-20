@@ -12,6 +12,12 @@ export default function AboutMe () {
     const Expirience = [
         {
             position: 'Frontend developer',
+            company: 'Freelance',
+            time: 'март 2020 - настоящее время',
+            link: ''
+        },
+        {
+            position: 'Frontend developer',
             company: 'Prime wood',
             time: 'Июль 2019 - февраль 2020',
             link: 'https://prime-wood.ru'
