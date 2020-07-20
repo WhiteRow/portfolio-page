@@ -99,6 +99,8 @@
 
         &__buttons {
             width: 260px;
+            display: flex;
+            justify-content: space-between;
         }
 
         &__button {
@@ -117,7 +119,6 @@
             border-radius: 30px;
 
             &.repo {
-                margin-left: 20px;
                 background-color: $primary_black;
             }
         }

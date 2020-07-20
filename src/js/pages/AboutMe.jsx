@@ -77,7 +77,7 @@ export default function AboutMe () {
 
             <div className="about-me__block">
                 {
-                    screen.width <= 640 
+                    screen.width <= 800 
                         ? <a href={avatar} target="_blank"><img className="about-me__avatar" src={avatar} alt="avatar"/></a>
                         : <img className="about-me__avatar" src={avatar} alt="avatar"/>
                 }

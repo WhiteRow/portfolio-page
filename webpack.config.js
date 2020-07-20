@@ -39,7 +39,7 @@ const main = merge([
 				filename: 'index.html',
 				template: directories.source + '/index.html',
 				chunks: ['index'],
-				favicon: directories.source + '/favicon.ico'
+				favicon: directories.source + '/favicon.png'
 			}),
 		],
 

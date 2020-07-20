@@ -11,7 +11,9 @@ export default function ProjectCard({ projectInfo }) {
                 <div className="my-projects__card__buttons">
                     { 
                         projectInfo.link ? 
-                            <a href={ projectInfo.link } 
+                            <a 
+                                href={ projectInfo.link } 
+                                target="_blank"
                                 style={{ backgroundColor: projectInfo.color }} 
                                 className="my-projects__card__button project">
                                 Проект
@@ -20,7 +22,12 @@ export default function ProjectCard({ projectInfo }) {
                     }
                     {
                         projectInfo.repo ? 
-                            <a href={ projectInfo.repo } className="my-projects__card__button repo">Репозиторий</a>
+                            <a 
+                                href={ projectInfo.repo } 
+                                target="_blank"
+                                className="my-projects__card__button repo">
+                                Репозиторий
+                            </a>
                         : ''
                     }
                     
