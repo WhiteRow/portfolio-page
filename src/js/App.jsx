@@ -9,9 +9,9 @@ import MyProjects from './pages/MyProjects';
 
 export default function App() {
     const socialMedias = [
-        { id: 1, name: 'linkedin', link: '' },
-        { id: 2, name: 'telegram', link: '' },
-        { id: 3, name: 'github', link: '' },
+        { id: 1, name: 'linkedin', link: 'https://www.linkedin.com/' },
+        { id: 2, name: 'telegram', link: 'tg://resolve?domain=Egor_Belov' },
+        { id: 3, name: 'github', link: 'https://github.com/WhiteRow' },
     ];
 
     const menuLinks = [

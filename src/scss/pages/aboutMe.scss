@@ -184,6 +184,10 @@
         }
 
         @include cmq(860px) {
+            max-width: 200px;
+        }
+
+        @include cmq(800px) {
             max-width: 30px;
         }
     }
