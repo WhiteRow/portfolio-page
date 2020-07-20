@@ -1,5 +1,3 @@
-import '../../scss/components/footer.scss';
-
 import React from 'react'
 
 function FooterLink ({ footerItem }) {
