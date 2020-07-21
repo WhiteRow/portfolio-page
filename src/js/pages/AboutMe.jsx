@@ -8,7 +8,6 @@ import Head from '../components/Head';
 
 
 export default function AboutMe () {
-    console.log(screen.width);
     const Expirience = [
         {
             position: 'Frontend developer',
