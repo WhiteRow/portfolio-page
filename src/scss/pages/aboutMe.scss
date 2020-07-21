@@ -25,6 +25,13 @@
     }
 
     &__block {
+        &:nth-child(1) {
+            width: 50%;
+            
+            @include cmq(1150px) {
+                width: 100%
+            }
+        }
 
         @include cmq(1150px) {
             width: 100%
@@ -54,6 +61,10 @@
         }
     }
 
+    .box {
+        justify-content: space-between;
+    }
+
     &__info {
         margin-top: 30px;
 
@@ -80,8 +91,7 @@
     &__experience {
         height: 435px;
 
-        padding-right: 20px;
-        margin-right: 120px;
+        padding-right: 30px;
 
         overflow: auto;
 

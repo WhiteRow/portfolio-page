@@ -13,7 +13,7 @@ export default function AboutMe () {
         {
             position: 'Frontend developer',
             company: 'Freelance',
-            time: 'март 2020 - настоящее время',
+            time: 'март 2020 - сейчас',
             link: ''
         },
         {
